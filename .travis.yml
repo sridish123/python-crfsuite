@@ -46,7 +46,10 @@ matrix:
     env: DOCKER_IMAGE=quay.io/pypa/manylinux1_i686
          PRE_CMD=linux32
   - sudo: required
-    arch: arm64
+    arch: arm64-graviton2
+    dist: focal
+    virt: vm
+    group: edge
     services:
       - docker
     env: DOCKER_IMAGE=quay.io/pypa/manylinux2014_aarch64
